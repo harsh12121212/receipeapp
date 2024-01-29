@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:receipeapp/welcome_screen.dart';
+import 'package:receipeapp/Screens/welcome_screen.dart';
 import 'splash_screen.dart';
 
 void main() {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: AppBarTheme(
-          color: Color(0xFFFF725E), // Set the background color of the app bar
+          color: Color(0xFFFF725E),
         ),
       ),
       home: FutureBuilder(
