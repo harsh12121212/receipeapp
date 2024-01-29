@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:receipeapp/login_screen.dart';
+import 'package:receipeapp/Screens/login_screen.dart';
+import 'package:receipeapp/Screens/registration_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
@@ -48,8 +49,10 @@ class WelcomeScreen extends StatelessWidget {
             SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
-                // Add register button functionality
-                // For example, you can navigate to the register screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignUpPage()),
+                );
               },
               style: ElevatedButton.styleFrom(
                 primary: Color(0xFFFF725E), // Set the button color to #FF725E
