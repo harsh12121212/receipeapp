@@ -23,6 +23,8 @@ class BezierContainer extends StatelessWidget {
                 colors: [
                   Color(0xFFFF725E,),
                   Color(0xFFFF725E,),
+                  Colors.red,
+                  Colors.red,
                 ],
               ),
             ),
