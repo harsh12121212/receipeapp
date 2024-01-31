@@ -7,22 +7,24 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: Container(
+        margin: const EdgeInsets.all(24),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
               'Welcome to Cook Book!',
               style: GoogleFonts.lora(
                 textStyle: TextStyle(
-                  fontSize: 30, // You can adjust the font size as needed
+                  fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFFFF725E), // Set the color to #ff725e
+                  color: Color(0xFFFF725E),
                 ),
               ),
             ),
             SizedBox(height: 10),
-            Image.asset('assets/welcomescreen.png', height: 400, width: 400),
+            Image.asset('assets/splashscreen.png', height: 400, width: 400),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
@@ -32,21 +34,22 @@ class WelcomeScreen extends StatelessWidget {
                 );
               },
               style: ElevatedButton.styleFrom(
-                primary: Color(0xFFFF725E), // Set the button color to #FF725E
-                minimumSize: Size(350, 40), // Set the button width and height
+                shape: const StadiumBorder(),
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                backgroundColor: const Color(0xFFFF725E),
               ),
               child: Text(
                 'Login',
                 style: GoogleFonts.lora(
                   textStyle: TextStyle(
-                    fontSize: 16, // Set the font size as needed
+                    fontSize: 20, // Set the font size as needed
                     fontWeight: FontWeight.bold,
                     color: Colors.white, // Set the text color
                   ),
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -55,14 +58,15 @@ class WelcomeScreen extends StatelessWidget {
                 );
               },
               style: ElevatedButton.styleFrom(
-                primary: Color(0xFFFF725E), // Set the button color to #FF725E
-                minimumSize: Size(350, 40), // Set the button width and height
+                shape: const StadiumBorder(),
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                backgroundColor: const Color(0xFFFF725E),
               ),
               child: Text(
                 'Register',
                 style: GoogleFonts.lora(
                   textStyle: TextStyle(
-                    fontSize: 16, // Set the font size as needed
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: Colors.white, // Set the text color
                   ),
