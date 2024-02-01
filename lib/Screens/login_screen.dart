@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:receipeapp/Screens/registration_screen.dart';
 
+import 'menu_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -27,7 +29,6 @@ class LoginScreen extends StatefulWidget  {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  bool _isPasswordVisible = false;
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +107,12 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
         const SizedBox(height: 20),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MenuScreen()),
+            );
+          },
           style: ElevatedButton.styleFrom(
             shape: const StadiumBorder(),
             padding: const EdgeInsets.symmetric(vertical: 16),

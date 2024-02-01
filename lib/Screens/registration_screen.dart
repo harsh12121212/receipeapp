@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:receipeapp/Screens/menu_screen.dart';
 import 'package:receipeapp/Widget/BezierContainer.dart';
 import 'package:receipeapp/Screens/login_screen.dart';
 
@@ -13,8 +14,6 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-  bool _obscurePassword = true;
-  bool _obscureConfirmPassword = true;
 
   @override
   Widget build(BuildContext context) {
@@ -104,7 +103,7 @@ class _SignUpPageState extends State<SignUpPage> {
             filled: true,
             prefixIcon: const Icon(Icons.lock, color: Color(0xFFFF725E)),
           ),
-          obscureText: _obscurePassword,
+          obscureText: true,
         ),
         const SizedBox(height: 10),
         TextField(
@@ -117,11 +116,16 @@ class _SignUpPageState extends State<SignUpPage> {
             filled: true,
             prefixIcon: const Icon(Icons.lock, color: Color(0xFFFF725E)),
           ),
-          obscureText: _obscureConfirmPassword ,
+          obscureText: true ,
         ),
         const SizedBox(height: 20),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MenuScreen()),
+            );
+          },
           style: ElevatedButton.styleFrom(
             shape: const StadiumBorder(),
             padding: const EdgeInsets.symmetric(vertical: 16),
