@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'drink_screen.dart';
+import 'food_screen.dart';
+
+
 void main() {
   runApp(const MyApp());
 }
@@ -139,7 +143,12 @@ class MenuScreen extends StatelessWidget {
                 Icons.arrow_forward_ios,
                 color: Color(0xFFFF725E),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FoodScreen()),
+                );
+              },
               backgroundColor: Colors.white,
             ),
             right: -250,
@@ -199,7 +208,12 @@ class MenuScreen extends StatelessWidget {
                 Icons.arrow_forward_ios,
                 color: Color(0xFFFF725E),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DrinkScreen()),
+                );
+              },
               backgroundColor: Colors.white,
             ),
             right: -250,
