@@ -13,13 +13,13 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Recipe form'),
         ),
-        body: RecipeFormScreen(),
+        body: AddRecipeScreen(),
       ),
     );
   }
 }
 
-class RecipeFormScreen extends StatelessWidget {
+class AddRecipeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(

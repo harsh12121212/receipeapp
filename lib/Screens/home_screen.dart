@@ -15,13 +15,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: MenuScreen(),
+      home: HomeScreen(),
     );
   }
 }
 
-class MenuScreen extends StatelessWidget {
-  const MenuScreen({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

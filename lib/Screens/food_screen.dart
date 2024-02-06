@@ -109,12 +109,16 @@ class FoodScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 20),
-            Text(
-              'Popular Food',
-              style: GoogleFonts.lora(
-                textStyle: TextStyle(
-                  fontSize: 25,
-                  color: Color(0xFFFF725E),
+            Padding(
+              padding: const EdgeInsets.only(left: 11.0),
+              // Add padding to the left of the title
+              child: Text(
+                'Popular Food',
+                style: GoogleFonts.lora(
+                  textStyle: TextStyle(
+                    fontSize: 25,
+                    color: Color(0xFFFF725E),
+                  ),
                 ),
               ),
             ),

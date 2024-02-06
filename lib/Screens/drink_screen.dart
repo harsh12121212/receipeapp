@@ -114,7 +114,7 @@ class DrinkScreen extends StatelessWidget {
               padding: const EdgeInsets.only(left: 11.0),
               // Add padding to the left of the title
               child: Text(
-                'Popular Food',
+                'Popular Beverages',
                 style: GoogleFonts.lora(
                   textStyle: TextStyle(
                     fontSize: 25,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:receipeapp/Screens/menu_screen.dart';
+import 'package:receipeapp/Screens/home_screen.dart';
 import 'package:receipeapp/Screens/login_screen.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -122,7 +122,7 @@ class _SignUpPageState extends State<SignUpPage> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => MenuScreen()),
+              MaterialPageRoute(builder: (context) => HomeScreen()),
             );
           },
           style: ElevatedButton.styleFrom(
