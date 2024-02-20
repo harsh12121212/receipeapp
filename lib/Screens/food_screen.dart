@@ -13,9 +13,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Food Recipes'),
-        ),
         body: FoodScreen(),
       ),
     );
@@ -90,7 +87,7 @@ class FoodScreen extends StatelessWidget {
     ];
     return Container(
       margin: const EdgeInsets.all(0),
-      height: 150, // Adjust the height as needed
+      height: 150,
       child: VerticalScrollViewWidget(listItems: foodItems),
     );
   }

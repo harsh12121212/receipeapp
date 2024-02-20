@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:receipeapp/Screens/profile_screen.dart';
 
+import 'addrecipe_screen.dart';
 import 'drink_screen.dart';
 import 'food_screen.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -14,39 +15,87 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: HomeScreen(),
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int _currentIndex = 0;
+
+  final List<Widget> _screens = [
+    HomeContent(),
+    AddRecipeScreen(),
+    ProfileScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Menu',
+          'Cook Book',
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          margin: const EdgeInsets.fromLTRB(0, 5, 0, 20),
-          child: Column(
-            children: [
-              _header(context),
-              _content(context),
-            ],
+      body: _screens[_currentIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        selectedItemColor: Color(0xFFFF725E),
+        showUnselectedLabels: false,
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              size: 30,),
+            label: 'Home',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.add_circle,
+              size: 30,),
+            label: 'Add recipe',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person, size: 30),
+            label: 'Profile',
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class HomeContent extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Container(
+        margin: const EdgeInsets.fromLTRB(0, 5, 0, 20),
+        child: Column(
+          children: [
+            _header(context),
+            _content(context),
+          ],
         ),
       ),
     );
   }
 
-  _header(context) {
+  Widget _header(context) {
     return Container(
       margin: const EdgeInsets.fromLTRB(10, 0, 10, 20),
       child: Column(
@@ -70,7 +119,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  _content(context) {
+  Widget _content(context) {
     return Container(
       width: double.infinity,
       height: 480,

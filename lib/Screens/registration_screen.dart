@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:receipeapp/Screens/home_screen.dart';
 import 'package:receipeapp/Screens/login_screen.dart';
 
+import 'addrecipe_screen.dart';
+
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key, this.title}) : super(key: key);
 
@@ -122,7 +124,7 @@ class _SignUpPageState extends State<SignUpPage> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => HomeScreen()),
+              MaterialPageRoute(builder: (context) => AddRecipeScreen()),
             );
           },
           style: ElevatedButton.styleFrom(
