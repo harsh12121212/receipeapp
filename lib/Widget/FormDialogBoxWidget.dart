@@ -7,6 +7,11 @@ class FormDialogBoxWidget extends StatefulWidget {
   final String textField3HintText;
   final String CloseButtonText;
   final String ProceedButtonText;
+  final Icon? prefixIcon1;
+  final Icon? prefixIcon2;
+  final Icon? prefixIcon3;
+  final Icon? suffixIcon;
+  bool obscure;
 
   FormDialogBoxWidget({
     required this.title,
@@ -15,6 +20,11 @@ class FormDialogBoxWidget extends StatefulWidget {
     required this.textField3HintText,
     required this.CloseButtonText,
     required this.ProceedButtonText,
+    this.prefixIcon1,
+    this.prefixIcon2,
+    this.prefixIcon3,
+    this.suffixIcon,
+    this.obscure = false,
   });
 
   @override
@@ -31,7 +41,7 @@ class _FormDialogBoxWidgetState extends State<FormDialogBoxWidget> {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           TextField(
-            obscureText: true,
+            obscureText: widget.obscure,
             decoration: InputDecoration(
               hintText: widget.textField1HintText,
               border: OutlineInputBorder(
@@ -40,12 +50,22 @@ class _FormDialogBoxWidgetState extends State<FormDialogBoxWidget> {
               ),
               fillColor: const Color(0xFFFF725E).withOpacity(0.1),
               filled: true,
-              prefixIcon: const Icon(Icons.lock, color: Color(0xFFFF725E)),
+              prefixIcon: widget.prefixIcon1 ?? Icon(Icons.lock, color: Color(0xFFFF725E)),
+              suffixIcon: InkWell(
+                onTap: () {
+                  setState(() {
+                    widget.obscure = !widget.obscure;
+                  });
+                },
+                child: Icon(
+                  widget.obscure ? Icons.visibility_off : Icons.visibility,
+                  color: Color(0xFFFF725E),
+                ),
+              ),
             ),
           ),
           SizedBox(height: 10),
           TextField(
-            obscureText: true,
             decoration: InputDecoration(
               hintText: widget.textField2HintText,
               border: OutlineInputBorder(
@@ -54,22 +74,43 @@ class _FormDialogBoxWidgetState extends State<FormDialogBoxWidget> {
               ),
               fillColor: const Color(0xFFFF725E).withOpacity(0.1),
               filled: true,
-              prefixIcon: const Icon(Icons.lock, color: Color(0xFFFF725E)),
+              prefixIcon: widget.prefixIcon2 ?? Icon(Icons.lock, color: Color(0xFFFF725E)),
+              suffixIcon: InkWell(
+                onTap: () {
+                  setState(() {
+                    widget.obscure = !widget.obscure;
+                  });
+                },
+                child: Icon(
+                  widget.obscure ? Icons.visibility_off : Icons.visibility,
+                  color: Color(0xFFFF725E),
+                ),
+              ),
             ),
           ),
           SizedBox(height: 10),
           TextField(
-            obscureText: true,
+            obscureText: widget.obscure,
             decoration: InputDecoration(
-              hintText:
-              widget.textField3HintText,
+              hintText: widget.textField3HintText,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(18),
                 borderSide: BorderSide.none,
               ),
               fillColor: const Color(0xFFFF725E).withOpacity(0.1),
               filled: true,
-              prefixIcon: const Icon(Icons.lock, color: Color(0xFFFF725E)),
+              prefixIcon: widget.prefixIcon1 ?? Icon(Icons.lock, color: Color(0xFFFF725E)),
+              suffixIcon: InkWell(
+                onTap: () {
+                  setState(() {
+                    widget.obscure = !widget.obscure;
+                  });
+                },
+                child: Icon(
+                  widget.obscure ? Icons.visibility_off : Icons.visibility,
+                  color: Color(0xFFFF725E),
+                ),
+              ),
             ),
           ),
         ],

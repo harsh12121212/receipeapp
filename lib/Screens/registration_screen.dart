@@ -48,7 +48,7 @@ class _SignUpPageState extends State<SignUpPage> {
       children: [
         const SizedBox(height: 10),
         Text(
-          'Welcome! Create your account here',
+          'Create your account',
           style: GoogleFonts.lora(
             textStyle: const TextStyle(
               fontSize: 25,
@@ -59,8 +59,8 @@ class _SignUpPageState extends State<SignUpPage> {
         ),
         Image.asset(
           'assets/welcomescreen.png',
-          height: 250.0,
-          width: 250.0,
+          height: 270.0,
+          width: 270.0,
           fit: BoxFit.cover,
         ),
       ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:receipeapp/Screens/aboutus_screen.dart';
 import '../Widget/DialogWidget.dart';
 import '../Widget/FormDialogBoxWidget.dart';
 import 'updateprofile_screen.dart';
@@ -12,7 +13,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
         body: ProfileScreen(),
       ),
@@ -58,7 +59,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             height: 220,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(100),
-              border: Border.all(color: Color(0xFFFF725E)),
+              border: Border.all(color: const Color(0xFFFF725E)),
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(100),
@@ -73,7 +74,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               height: 40,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
-                  color: Color(0xFFFF725E)),
+                  color: const Color(0xFFFF725E)),
               child: const Icon(
                 Icons.edit,
                 color: Colors.white,
@@ -87,7 +88,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       Text(
         "Jane Doe",
         style: GoogleFonts.lora(
-          textStyle: TextStyle(
+          textStyle: const TextStyle(
               color: Color(0xFFFF725E),
               fontSize: 25,
               fontWeight: FontWeight.w600),
@@ -96,7 +97,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       Text(
         "janedoe@gmail.com",
         style: GoogleFonts.lora(
-          textStyle: TextStyle(
+          textStyle: const TextStyle(
             fontSize: 15,
           ),
         ),
@@ -114,31 +115,40 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => UpdateProfileScreen(),
+                builder: (context) => const UpdateProfileScreen(),
               ),
             );
           }),
       ProfileMenuWidget(
-          title: "Change Password",
-          icon: Icons.lock_outline,
-          onPress: () {
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return FormDialogBoxWidget(
-                  title: 'Change Password',
-                  textField1HintText: 'Enter current password',
-                  textField2HintText: 'Enter new password',
-                  textField3HintText: 'Confirm new password',
-                  CloseButtonText: 'Cancel',
-                  ProceedButtonText: 'Change Password',
-                );
-              },
-            );
-          },
-          ),
+        title: "Change Password",
+        icon: Icons.lock_outline,
+        onPress: () {
+          showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return FormDialogBoxWidget(
+                title: 'Change Password',
+                textField1HintText: 'Enter current password',
+                textField2HintText: 'Enter new password',
+                textField3HintText: 'Confirm new password',
+                CloseButtonText: 'Cancel',
+                ProceedButtonText: 'Change Password',
+              );
+            },
+          );
+        },
+      ),
       ProfileMenuWidget(
-          title: "About us", icon: Icons.info_outline, onPress: () {}),
+          title: "About us",
+          icon: Icons.info_outline,
+          onPress: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const AboutUsScreen(),
+              ),
+            );
+          }),
       ProfileMenuWidget(
         title: "Logout",
         icon: Icons.logout_outlined,

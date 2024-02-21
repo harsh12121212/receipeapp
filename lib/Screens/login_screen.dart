@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:receipeapp/Screens/forgotpswd_screen.dart';
 import 'package:receipeapp/Screens/registration_screen.dart';
-
 import 'home_screen.dart';
 
 void main() {
@@ -9,7 +9,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
 
 class LoginScreen extends StatefulWidget  {
 
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          margin: const EdgeInsets.all(24),
+          margin: const EdgeInsets.fromLTRB(24, 40, 24, 0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -70,8 +70,8 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
         Image.asset(
           'assets/loginscreen.png',
-          height: 300.0,
-          width: 300.0,
+          height: 360.0,
+          width: 350.0,
           fit: BoxFit.cover,
         ),
       ],
@@ -135,20 +135,25 @@ class _LoginScreenState extends State<LoginScreen> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         TextButton(
-          onPressed: () {},
-          child: Text(
-            "Forgot password?",
-            style: TextStyle(
-              color: Color(0xFFFF725E),
-              fontSize: 15,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ForgotPasswordScreen()),
+              );
+            },
+            child: const Text(
+              "Forgot password?",
+              style: TextStyle(
+                color: Color(0xFFFF725E),
+                fontSize: 15,
+              ),
             ),
           ),
-        ),
         const SizedBox(height: 20),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "Don't have an account? ",
               style: TextStyle(
                 fontSize: 18,
@@ -161,7 +166,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   MaterialPageRoute(builder: (context) => const SignUpPage()),
                 );
               },
-              child: Text(
+              child: const Text(
                 "Sign Up",
                 style: TextStyle(
                   color: Color(0xFFFF725E),
