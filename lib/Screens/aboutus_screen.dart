@@ -58,7 +58,7 @@ class AboutUsScreen extends StatelessWidget {
 
   _header(context) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(24, 60 , 24,0),
+      margin: const EdgeInsets.fromLTRB(24, 60, 24, 0),
       child: Column(
         children: [
           Image.asset('assets/cookimg.png', height: 110, width: 110),
@@ -115,7 +115,7 @@ class AboutUsScreen extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Text(
-          "We believe that cooking is not just about following instructions, but about expressing yourself through flavors, textures, and creativity. With our user-friendly interface and extensive database of recipes, you can unleash your culinary imagination and bring delicious dishes to life in your own kitchen.",
+            "We believe that cooking is not just about following instructions, but about expressing yourself through flavors, textures, and creativity. With our user-friendly interface and extensive database of recipes, you can unleash your culinary imagination and bring delicious dishes to life in your own kitchen.",
             style: GoogleFonts.roboto(
               textStyle: const TextStyle(
                 fontSize: 18,
