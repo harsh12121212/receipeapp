@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:receipeapp/Widget/HorizontalScrollViewWidget.dart';
-import '../Model/ListItem.dart';
+import '../Model/RecipeData.dart';
 import '../Widget/VerticalScrollViewWidget.dart';
 
 void main() {
@@ -79,11 +79,43 @@ class FoodScreen extends StatelessWidget {
   }
 
   _verticalScroller(context) {
-    List<ListItem> foodItems = [
-      ListItem(title: 'Punjabi', imagePath: 'assets/foodimg1.png',rating: '', rated: '',detail: ''),
-      ListItem(title: 'South Indian', imagePath: 'assets/foodimg2.png',rating: '',rated: '',detail: ''),
-      ListItem(title: 'Chat', imagePath: 'assets/foodimg3.png',rating: '',rated: '',detail: ''),
-      ListItem(title: 'Biryani', imagePath: 'assets/foodimg4.png',rating: '',rated: '',detail: ''),
+    List<RecipeData> foodItems = [
+      RecipeData(
+          title: 'Punjabi',
+          imagePath: 'assets/foodimg1.png',
+          rating: '',
+          rated: '',
+          detail: '',
+          description: '',
+          calories: '',
+          time: ''),
+      RecipeData(
+          title: 'South Indian',
+          imagePath: 'assets/foodimg2.png',
+          rating: '',
+          rated: '',
+          detail: '',
+          description: '',
+          calories: '',
+          time: ''),
+      RecipeData(
+          title: 'Chat',
+          imagePath: 'assets/foodimg3.png',
+          rating: '',
+          rated: '',
+          detail: '',
+          description: '',
+          calories: '',
+          time: ''),
+      RecipeData(
+          title: 'Biryani',
+          imagePath: 'assets/foodimg4.png',
+          rating: '',
+          rated: '',
+          detail: '',
+          description: '',
+          calories: '',
+          time: ''),
     ];
     return Container(
       margin: const EdgeInsets.all(0),
@@ -93,11 +125,47 @@ class FoodScreen extends StatelessWidget {
   }
 
   _horizontalFood(context) {
-    List<ListItem> foodItems = [
-      ListItem(title: 'Chole Bhature ', imagePath: 'assets/foodimg1.png',rating: '4.1 ',rated: '(125 ratings)  ',detail: '• Indian Food'),
-      ListItem(title: 'Learn to make soft idlis', imagePath: 'assets/foodimg2.png',rating: '4.3 ',rated: '(110 ratings)  ',detail: '• Indian Food'),
-      ListItem(title: 'Pani puri in 30 minutes', imagePath: 'assets/foodimg3.png',  rating: '4.5 ',rated: '(90 ratings)  ',detail: '• Indian Food'),
-      ListItem(title: 'Chicken Dum Biryani', imagePath: 'assets/foodimg4.png',rating: '4.7 ',rated: '(25 ratings)  ',detail: '• Indian Food'),
+    List<RecipeData> foodItems = [
+      RecipeData(
+        title: 'Chole Bhature',
+        imagePath: 'assets/foodimg1.png',
+        rating: '4.1',
+        rated: '(125 ratings)',
+        detail: '• Indian Food',
+        description: "Chole Bhature is a popular North Indian dish consisting of spicy chickpea curry (chole) and deep-fried bread (bhature). It's often served with pickles and onions.",
+        calories: "Approximately 350 calories per serving",
+        time: "Preparation: 20 minutes, Cooking: 40 minutes",
+      ),
+      RecipeData(
+        title: 'Learn to make soft idlis',
+        imagePath: 'assets/foodimg2.png',
+        rating: '4.3',
+        rated: '(110 ratings)',
+        detail: '• Indian Food',
+        description: "Idli is a traditional South Indian dish made from fermented rice and lentil batter. It's steamed to perfection and served with chutney and sambar.",
+        calories: "Approximately 60 calories per idli",
+        time: "Preparation: 10 minutes, Fermentation: 8 hours, Cooking: 10 minutes",
+      ),
+      RecipeData(
+        title: 'Pani puri in 30 minutes',
+        imagePath: 'assets/foodimg3.png',
+        rating: '4.5',
+        rated: '(90 ratings)',
+        detail: '• Indian Food',
+        description: "Pani Puri, also known as Golgappa or Puchka, is a popular street food in India. It consists of crispy hollow puris filled with spicy tangy water (pani) and mashed potato filling.",
+        calories: "Approximately 80 calories per serving",
+        time: "Preparation: 20 minutes, Cooking: 10 minutes",
+      ),
+      RecipeData(
+        title: 'Chicken Dum Biryani',
+        imagePath: 'assets/foodimg4.png',
+        rating: '4.7',
+        rated: '(25 ratings)',
+        detail: '• Indian Food',
+        description: "Chicken Dum Biryani is a flavorful and aromatic rice dish made by layering marinated chicken and partially cooked rice, then slow-cooked to perfection.",
+        calories: "Approximately 400 calories per serving",
+        time: "Preparation: 30 minutes, Cooking: 1 hour",
+      ),
     ];
     return Container(
       margin: const EdgeInsets.all(0),

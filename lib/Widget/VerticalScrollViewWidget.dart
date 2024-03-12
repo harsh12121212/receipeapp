@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../Model/ListItem.dart';
+import '../Model/RecipeData.dart';
 
 class VerticalScrollViewWidget extends StatelessWidget {
-  final List<ListItem> listItems;
+  final List<RecipeData> listItems;
 
   VerticalScrollViewWidget({required this.listItems});
 
