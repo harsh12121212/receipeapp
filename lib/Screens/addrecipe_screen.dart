@@ -37,7 +37,7 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
   final List _instructionsFormList = [];
   final List<TextEditingController> _ingredientControllersList = [];
   final List<TextEditingController> _instructionsControllersList = [];
-  bool _isLoading = false;
+  final bool _isLoading = false;
   final GlobalKey<FormState> _formKey1 = GlobalKey<FormState>();
   final GlobalKey<FormState> _formKey2 = GlobalKey<FormState>();
   String? servesValue;
