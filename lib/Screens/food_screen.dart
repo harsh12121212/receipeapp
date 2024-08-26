@@ -11,7 +11,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
         body: FoodScreen(),
       ),
@@ -55,7 +55,7 @@ class FoodScreen extends StatelessWidget {
             Text(
               'Hello User !',
               style: GoogleFonts.lora(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   fontSize: 25, // You can adjust the font size as needed
                   color: Color(0xFFFF725E), // Set the color to #ff725e
                 ),
@@ -180,7 +180,7 @@ class FoodScreen extends StatelessWidget {
               child: Text(
                 'Popular Food',
                 style: GoogleFonts.lora(
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                     fontSize: 25,
                     color: Color(0xFFFF725E),
                   ),
@@ -188,7 +188,7 @@ class FoodScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Container(
+            SizedBox(
               height: 390,
               child: HorizontalScrollViewWidget(listItems: foodItems),
             ),
