@@ -8,7 +8,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
         body: AboutUsScreen(),
       ),
@@ -23,7 +23,7 @@ class AboutUsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'About us',
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
@@ -62,7 +62,7 @@ class AboutUsScreen extends StatelessWidget {
       child: Column(
         children: [
           Image.asset('assets/cookimg.png', height: 110, width: 110),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Text(
             '"No one is born a great cook, one learns by doing."',
             textAlign: TextAlign.center,
@@ -75,7 +75,7 @@ class AboutUsScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             '               ~ Julia Child',
             textAlign: TextAlign.center,
@@ -88,7 +88,7 @@ class AboutUsScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           const Divider(
             color: Colors.white,
             thickness: 5,
@@ -113,7 +113,7 @@ class AboutUsScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             "We believe that cooking is not just about following instructions, but about expressing yourself through flavors, textures, and creativity. With our user-friendly interface and extensive database of recipes, you can unleash your culinary imagination and bring delicious dishes to life in your own kitchen.",
             style: GoogleFonts.roboto(

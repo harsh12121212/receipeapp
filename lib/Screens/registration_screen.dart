@@ -123,7 +123,7 @@ class _SignUpPageState extends State<SignUpPage> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => AddRecipeScreen()),
+              MaterialPageRoute(builder: (context) => const AddRecipeScreen()),
             );
           },
           style: ElevatedButton.styleFrom(
@@ -150,7 +150,7 @@ class _SignUpPageState extends State<SignUpPage> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "Already have an account? ",
               style: TextStyle(
                 fontSize: 18,
@@ -163,7 +163,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   MaterialPageRoute(builder: (context) => const LoginScreen()),
                 );
               },
-              child: Text(
+              child: const Text(
                 "Login",
                 style: TextStyle(
                   color: Color(0xFFFF725E),

@@ -57,8 +57,8 @@ class DrinkScreen extends StatelessWidget {
               'Hello User !',
               style: GoogleFonts.lora(
                 textStyle: TextStyle(
-                  fontSize: 25, // You can adjust the font size as needed
-                  color: Color(0xFFFF725E), // Set the color to #ff725e
+                  fontSize: 25,
+                  color: Color(0xFFFF725E),
                 ),
               ),
             ),
